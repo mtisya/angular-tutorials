@@ -1,7 +1,11 @@
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 
 export class CartComponent implements OnInit {
-items;
+  items;
 
   constructor(
     private cartService: CartService
