@@ -3,15 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+export class CartService {
 
-export class CartComponent implements OnInit {
-  items;
+  constructor() {}
 
-  constructor(
-    private cartService: CartService
-  ) { }
-
-  ngOnInit() {
-    this.items = this.cartService.getItems();
-  }
 }
