@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
   items = [];
-  addToList(register) {
+  addToCart(register) {
     this.items.push(register);
   }
 
@@ -14,7 +14,7 @@ export class LoginService {
     return this.items;
   }
 
-  clearList() {
+  clearLogin() {
     this.items = [];
     return this.items;
   }

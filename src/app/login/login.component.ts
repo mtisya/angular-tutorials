@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     // Process checkout data here
     console.warn('Your order has been submitted', customerData);
 
-    this.items = this.loginService.clearlogin();
+    this.items = this.loginService.clearLogin();
     this.loginForm.reset();
   }
 }
