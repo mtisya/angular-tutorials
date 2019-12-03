@@ -10,15 +10,19 @@ import { LoginService } from '../login.service';
   styleUrls: ['./login-details.component.css']
 })
 export class LoginDetailsComponent implements OnInit {
-  addToCart(product) {
-    window.alert('Your product has been added to the cart!');
-    this.cartService.addToCart(product);
-  }
+
+  register
   constructor(
     private route: ActivatedRoute,
     private loginService: LoginService) { }
-
-  ngOnInit() {
+  addToCart(register) {
+    window.alert('Your product has been added to the cart!');
+    this.loginService.addToCart(register);
   }
+  ngOnInit(){
+    this.route.paramMap.subscribe(params => {
+      this.register = register[+params.get('registerId')];
+    });
+   }
 
 }

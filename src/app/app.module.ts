@@ -24,8 +24,10 @@ import { LoginDetailsComponent } from './login-details/login-details.component';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'register/:registerId', component: LoginDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'login', component: LoginComponent },
     ])
   ],
   declarations: [

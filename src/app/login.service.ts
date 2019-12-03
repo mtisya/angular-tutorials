@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  users = [];
+  items = [];
   addToList(register) {
-    this.users.push(register);
+    this.items.push(register);
   }
 
-  getUsers() {
-    return this.users;
+  getItems() {
+    return this.items;
   }
 
   clearList() {
-    this.users = [];
-    return this.users;
+    this.items = [];
+    return this.items;
   }
-  constructor() { }
-
+ constructor(
+    private http: HttpClient
+  ) {}
 }
