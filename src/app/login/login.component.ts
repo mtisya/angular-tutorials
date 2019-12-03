@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
+import { LoginService } from '../login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,14 +13,14 @@ export class LoginComponent implements OnInit {
   loginForm;
   
   constructor(
-    private cartService: CartService,
+    private loginService: LoginService,
     private formBuilder: FormBuilder,
     ) { }
 
   ngOnInit() {
-    this.items = this.cartService.getItems();
+    this.items = this.loginService.getItems();
   
-    this.checkoutForm = this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       name: '',
       address: ''
     });

@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class LoginService {
   users = [];
-  addToList(product) {
-    this.users.push(product);
+  addToList(register) {
+    this.users.push(register);
   }
 
   getUsers() {
